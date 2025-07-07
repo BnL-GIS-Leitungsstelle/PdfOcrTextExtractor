@@ -7,8 +7,17 @@ public static class PdfImageConverter
 {
     public static int GetTotalPages(string pdfFileName)
     {
+        try
+        {
         using var pdfStream = new FileStream(pdfFileName, FileMode.Open, FileAccess.Read);
         return PDFtoImage.Conversion.GetPageCount(pdfStream);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"Invalid File {pdfFileName}:",e.Message);
+            return 0;
+        }
+
     }
 
     public static async IAsyncEnumerable<byte[]> RenderPdfToImagesAsync(string pdfFileName)

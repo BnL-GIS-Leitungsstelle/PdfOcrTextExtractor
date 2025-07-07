@@ -2,8 +2,12 @@
 using PdfTextExtractor.Db;
 using Spectre.Console;
 
-var inputFolder = @"D:\Z70ANIT1\PdfTextExtractor\pdfs";
-var outputSqlite = @"D:\Z70ANIT1\PdfTextExtractor\result.sqlite";
+//var inputFolder = @"D:\Z70ANIT1\PdfTextExtractor\pdfs";
+//var outputSqlite = @"D:\Z70ANIT1\PdfTextExtractor\result.sqlite";
+
+var inputFolder = @"C:\temp\souris_talpa_docu";
+var outputSqlite = @"C:\temp\resultPdfOcrDnl.sqlite";
+
 
 AnsiConsole.MarkupLine("[bold green]Initialize...[/]");
 
